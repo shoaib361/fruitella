@@ -1,0 +1,50 @@
+/* Keep the hero product photo clear and unfiltered. */
+.hero-image-wrap::after {
+  display: none;
+}
+
+/* A clean product-photo card replaces the yellow split background. */
+.hero {
+  background: var(--cream);
+}
+
+.hero-image-wrap {
+  width: min(43%, 610px);
+  height: calc(100% - 64px);
+  top: 32px;
+  right: 5%;
+  border-radius: 28px;
+  box-shadow: 0 22px 50px rgba(55, 74, 35, .18);
+}
+
+.hero-image {
+  min-height: 0;
+  mix-blend-mode: normal;
+  object-position: center;
+}
+
+.hero-sun {
+  width: 300px;
+  height: 300px;
+  right: 2%;
+  top: 25%;
+  background: #f7df91;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    background: var(--cream);
+  }
+
+  .hero-image-wrap {
+    width: calc(100% - 34px);
+    height: 300px;
+    top: 398px;
+    right: 17px;
+    border-radius: 22px;
+  }
+
+  .hero-image {
+    min-height: 300px;
+  }
+}
